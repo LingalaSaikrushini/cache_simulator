@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LRU Cache Simulator</title>
+    <link rel="stylesheet" href="lrucache.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>LRU Cache Simulator</h1>
+
+    <div class="row">
+        <input type="number" id="capacity" placeholder="Cache Size">
+        <button onclick="initCache()">Set Capacity</button>
+    </div>
+
+    <div class="row">
+        <input type="text" id="putKey" placeholder="Key">
+        <input type="number" id="putValue" placeholder="Value">
+        <button onclick="putValue()">PUT</button>
+        <button onclick="getValue()">GET</button>
+    </div>
+
+    <div class="stats">
+        Hits: <span id="hits">0</span> |
+        Misses: <span id="misses">0</span>
+    </div>
+
+    <h3>Cache (Most Recent → Least Recent)</h3>
+    <div id="cache" class="cache-container"></div>
+</div>
+
+<script src="lrucache.js"></script>
+</body>
+</html>
